@@ -1,4 +1,4 @@
-![ATU Logo](images/ATU_logo.png)
+![ATU Logo](images/ATU_Logo.png)
 
 # Data Representation
 
