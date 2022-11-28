@@ -1,0 +1,83 @@
+<html>
+    <header>
+        <meta name ="viewport" content = "width=device-width, initial-scale=1.0">
+        <title> Digital CV </title>
+        <link rel ="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gastatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </header>
+    <body>
+        <section class ="header">
+            <nav>
+                <a href ="https://www.gmit.ie/"><img src="../../images/ATU_Logo.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href = "home.html">HOME</a></li>
+                        <li><a href = "about.html">ABOUT</a></li>
+                        <li><a href = "portfolio.html">PORTFOLIO</a></li>
+                        <li><a href = "blog.html">BLOG</a></li>
+                        <li><a href = "contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+        <div class ="text-box">
+            <h1>Digital Protfolio</h1>
+            <p> Make a webpage to show future employers your technical brilliant </p>
+            <a href=" " class="here_button", > Visit here to know more </a>
+        </div>
+        </section>
+
+        <!--Campus-->
+        <section class="campus">
+            <h1></h1>
+            <div class = "row">
+                <div class ="campus-col">
+                    <img src="../../images/about_me.jpeg" >
+                    <div class="layer">
+                        <h3>ABOUT ME</h3>
+                    </div>
+                </div>
+                <div class ="campus-col">
+                    <img src="../../images/latest_project4.jpeg">
+                    <div class="layer">
+                        <h3>LATEST PROJECTS</h3>
+                    </div>
+                </div>
+                <div class ="campus-col">
+                    <img src="../../images/experience.jpeg">
+                    <div class="layer">
+                        <h3>EXPERIENCE</h3>
+                    </div>
+                </div>
+                <div class ="campus-col">
+                    <img src="../../images/ppl_sunset.jpeg">
+                    <div class="layer">
+                        <h3>HIRE ME</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!------JavaScript for side-bar Menu ----->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+        </script>
+
+
+
+        <!---Footer section -->
+
+
+    </body>
+</html>
