@@ -94,7 +94,7 @@ class DigiCert:
         self.closeAll()
         return count
     
-    def showJobsTable(self):
+'''     def showJobsTable(self):
         cursor = self.getcursor()
         sql="select * from jobs"
         cursor.execute(sql)
@@ -105,7 +105,7 @@ class DigiCert:
             print(row)
             print("\n")
 
-        self.closeAll()
+        self.closeAll() '''
 
    
 
@@ -145,7 +145,7 @@ if __name__ == "__main__":
     count = run.countschool('Labware')
     print ("The number of completed courses from Labware are:", count)
     
-    run.showJobsTable()
+    #run.showJobsTable()
 
    
     print("Run Check ")
