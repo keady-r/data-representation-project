@@ -32,8 +32,9 @@ class DigiCert:
         self.connection = mysql.connector.connect(
             host=       self.host,
             user=       self.user,
-            password=   self.password   
+            password=   self.password, 
         )
+        
         self.cursor = self.connection.cursor()
         sql="create database "+ self.database
         self.cursor.execute(sql)
@@ -93,6 +94,19 @@ class DigiCert:
         self.closeAll()
         return count
     
+    def showJobsTable(self):
+        cursor = self.getcursor()
+        sql="select * from jobs"
+        cursor.execute(sql)
+        result = cursor.fetchall()
+  
+        # loop through the rows
+        for row in result:
+            print(row)
+            print("\n")
+
+        self.closeAll()
+
    
 
 
@@ -130,6 +144,8 @@ if __name__ == "__main__":
 
     count = run.countschool('Labware')
     print ("The number of completed courses from Labware are:", count)
+    
+    run.showJobsTable()
 
    
     print("Run Check ")

@@ -1,7 +1,26 @@
 from flask import Flask, url_for, request, redirect, abort,jsonify
+from databaseCreate import run
+import mysql.connector
+import webbrowser
+
+# Testing connection to database - if unsuccessful try running the databaseCreate Command again
+
+conn = mysql.connector.connect(user='root', password='', host='localhost',database='datarepresentation')
+
+if conn:
+    print ("Connected Successfully")
+else:
+    print ("Connection Not Established")
 
 
+
+
+
+
+# Creating Flask Application 
 app = Flask(__name__, static_url_path='', static_folder='staticpages' )
+
+#jobs = run.showJobsTable()
 
 jobs = [
     {"id":1,"Role":"Waitress","Company":"Papa Rich","Year_Start":2018,"Year_End":2019,"Description":"Waites tables in busy resturant"},
@@ -10,36 +29,75 @@ jobs = [
     {"id":4,"Role":"LabOps Developer","Company":"Pfizer","Year_Start":2021,"Year_End":2022,"Description":"Responsible for the validation and implementation of LIMS system"},
     {"id":5,"Role":"Software Systems Architect","Company":"Pfizer","Year_Start":2022,"Year_End":"Current","Description":"Technical Arectect for multiple softwares. Database implementation, server upgrade manager."},
 ]
-nextjobsId=6
+nextjobsId=6 
+
 
 #### - Start 
 
 @app.route('/jobs', methods = ['GET'])
 def getAllJobs():
-    return jsonify(jobs)
+    selectJobsTable = """SELECT * FROM jobs"""
+    cursor = conn.cursor()
+    cursor.execute(selectJobsTable)
+    result = cursor.fetchall()
+    p = []
 
-@app.route('/entry/<jobRole>', methods = ['POST'])
-def newJobEntry(jobRole):
-    ip_addr = request.remote_addr
-    data = (jobRole, ip_addr)
-    newid = jobEntry.create(data)
+    jobs = "ID,Role,Company,YearStart,YearEnd,Description"
+    p.append(jobs)
 
+    for row in result:
+        a = "%s"%row[0]
+        p.append(a)
+        b = "%s"%row[1]
+        p.append(b)
+        c = "%s"%row[2]
+        p.append(c)
+        d = "%s"%row[3]
+        p.append(d)
+        e = "%s"%row[4]
+
+        
+    return jsonify(result)
+
+@app.route('/education', methods = ['GET'])
+def getAllEducation():
+    selectEducationTable = """SELECT * FROM education"""
+    cursor = conn.cursor()
+    cursor.execute(selectEducationTable)
+    rows = cursor.fetchall()
+    p = []
+
+    school = "ID,School,Course,Award,YearStart,YearEnd"
+    p.append(school)
+
+    for row in rows:
+        a = "%s"%row[0]
+        p.append(a)
+        b = "%s"%row[1]
+        p.append(b)
+        c = "%s"%row[2]
+        p.append(c)
+        d = "%s"%row[3]
+        p.append(d)
+        e = "%s"%row[4]
+
+
+    return jsonify(rows)
+
+
+@app.route('/jobs', methods = ['POST'])
+def newJobEntry(Role, Company, YEAR_START, YEAR_END, Description):
+    dataJobs = (Role, Company, YEAR_START, YEAR_END, Description)
+    newid = run.createJobsRow(dataJobs)
+    
     return jsonify({'id':newid})
 
 
-@app.route('/entry/<jobRole>', methods = ['GET'])
+@app.route('/jobs', methods = ['GET'])
 def returnJobCount(jobRole):
-    count = jobEntry.countjobs(jobRole)
+    count = run.countschool('Labware')
     return jsonify({jobRole:count})
 
-@app.route('/entry', methods = ['GET'])
-def getAllCount():
-    allcounts = []
-    for job in jobs:
-        job = ['Role'] 
-        count = jobEntry.countjobs(jobRole)
-        allcounts.append({job:count})
-    return jsonify(allcounts)
 
 @app.route('/entry/all', methods = ['delete'])
 def deleteAllEntries():
@@ -55,8 +113,6 @@ def findID(id):
     if len(foundJobs) == 0:
         return jsonify({}), 204
     return jsonify(foundJobs[0])
-
-    return "find by ID"+str(id)
 
 
 #curl -H "Content-Type:application/json" -X POST -d‘{"Role":“xxx","Company":“xxx","Year_Start":3000}’
