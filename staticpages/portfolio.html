@@ -1,7 +1,7 @@
 <html>
     <header>
         <meta name ="viewport" content = "width=device-width, initial-scale=1.0">
-        <title> Digital CV </title>
+        <title> Portfolio </title>
         <link rel ="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.gastatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
@@ -10,103 +10,55 @@
     <body>
         <section class ="header">
             <nav>
-                <a href ="index.html"><img src="../images/ATU_Logo.png"></a>
+                <a href ="https://www.gmit.ie/"><img src="images/ATU_Logo.png"></a>
                 <div class="nav-links" id="navLinks">
                     <i class="fa fa-times" onclick="hideMenu()"></i>
                     <ul>
                         <li><a href = "home.html">HOME</a></li>
                         <li><a href = "about.html">ABOUT</a></li>
                         <li><a href = "portfolio.html">PORTFOLIO</a></li>
-                        <li><a href = "blog.html">BLOG</a></li>
                         <li><a href = "contact.html">CONTACT</a></li>
                     </ul>
                 </div>
                 <i class="fa fa-bars" onclick="showMenu()"></i>
             </nav>
         <div class ="text-box">
-
+            <h1>Digital Portfolio</h1>
+            <p>An interactive digital CV to show future employers your technical brilliant!</p>
+            <a href="contact.html" class="here_button", > Click Here to Subcribe Today </a>
         </div>
         </section>
 
-        <!---Course-->
-        <section class="course">
-            <h1>Courses we offer</h1>
-            <p> this is the detail </p>
-            <div class="row">
-        
-                <div class="course-col">
-                    <h3>Intermediate</h3>
-                    <p> This is xyz</p>
-
-                </div>
-                <div class="course-col">
-                    <h3>Degree</h3>
-                    <p> This is xyz</p>
-                </div>
-                <div class="course-col">
-                    <h3>PostGraduate</h3>
-                    <p> This is xyz</p>
-                </div>
-            </div>
-
-        </section>
-        <!--Campus-->
-        <section class="campus">
-            <h1>Our global campus</h1>
-            <p> blah ssss</p>
+        <!--Portfolio-->
+        <section class="portfolio">
             <div class = "row">
-                <div class ="campus-col">
-                    <img src="../../images/ppl_sunset.jpeg">
+                <div class ="portfolio-col">
+                    <img src="images/about_me.jpeg"></a>
                     <div class="layer">
-                        <h3>London</h3>
+                        <a href = "aboutMe.html"><h3>ABOUT ME</h3></a>
                     </div>
                 </div>
-                <div class ="campus-col">
-                    <img src="../../images/ppl_sunset.jpeg">
+                <div class ="portfolio-col">
+                    <img src="images/latest_project4.jpeg">
                     <div class="layer">
-                        <h3>New York </h3>
+                        <a href = "https://github.com/keady-r"><h3>LATEST PROJECTS</h3></a>
                     </div>
                 </div>
-                <div class ="campus-col">
-                    <img src="../../images/ppl_sunset.jpeg">
+                <div class ="portfolio-col">
+                    <img src="images/experience.jpeg">
                     <div class="layer">
-                        <h3>Washinton</h3>
+                        <a href = "http://127.0.0.1:5000/jobs"><h3>EXPERIENCE</h3></a>
+                    </div>
+                </div>
+                <div class ="portfolio-col">
+                    <img src="images/ppl_sunset.jpeg">
+                    <div class="layer">
+                        <a href = "hire.html"><h3>HIRE ME</h3></a>
                     </div>
                 </div>
             </div>
         </section>
-        <!--Facility-->
-        <section class="facilities">
-            <h1>Facility</h1>
-            <p>This si the desription</p>
-            <div class="row">
-                <div class="facilities-col">
-                    <img src="../../images/tent_sun.jpeg">
-                    <h1>
-                        header 1
-                    </h1>
-                    <p>Paragraog1 </p>
-                </div>
-                <div class="facilities-col">
-                    <img src="../../images/rocks_hike.jpeg">
-                    <h1>
-                        header 2
-                    </h1>
-                    <p>Paragraog2 </p>
-                </div>
-                <div class="facilities-col">
-                    <img src="../../images/mountain_snow.jpeg" >
-                    <h1>
-                        header 3
-                    </h1>
-                    <p>Paragraog3 </p>
-                </div>
-            </div>
-        </section>
-
-
-
-
+    
         <!------JavaScript for side-bar Menu ----->
         <script>
             var navLinks = document.getElementById("navLinks");
@@ -119,11 +71,5 @@
                 navLinks.style.right = "-200px";
             }
         </script>
-
-
-
-        <!---Footer section -->
-
-
     </body>
 </html>

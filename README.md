@@ -56,16 +56,25 @@ ______________________________________________________________________________
 
 
 This repository contains my project submission for the Data Representation module 2022. The purpose of this project is to demonstrate that I have achieved the learning outcomes of the module, which are:
-- 
-- 
-- 
-- 
+- Create a basic Flask Server
+- Rest API with ability to perform CRUD operations
+- Create a Database with 2 tables
+- Webpage  interface 
 
 ***
+### DataBases:
+1. Login to MySql on your local desktop
+2. In a seperate terminal navigate to te downloaded files and run 'python databaseCreate.py'   
+3. In the terminal with mySQL open Type Show Databases;>use datarepresentation;>show tables;. You should be able to see jobs and edcuation tables. Use the command 'Select * from <table>' to see the records within each table. 
 
 ## Table of Contents
 
-- Folders:
+- FOLDERS:
+- DATABASE COMMANDS - python scripts to create and update the database content. 
+- STATICPAGES - contains html web pages and image folder to support the web interface. 
+- README - information on how to run the project. 
+- Requirements - what needs to be installed to run the project. 
+- SERVER.py - the python script used to start the server. 
 
 
 ***
@@ -88,12 +97,13 @@ Alternatively, if you do not wish to install all these packages and files to you
 1. Type `python3 -m venv venv` to create a virtual environment (VM).
 2. Then `source venv/bin/activate` for MAC or `.\venv\Script\activate.bat` for Windows to open the environment.
 3. Then `pip install -r requirements.txt` to install the necessary packages
-4. Then `python restfulAPI.py` to run.
+4. Then enter `python server.py` or 'python3 server.py' depending on what python package you have installed to run the program. 
 
 To exit the VM type deactivate.
 
 ## Run API
-
+1. Once the commands above are entered a link to the url will be created : http://127.0.0.1:5000. Open the link and typr /home.html to open the home page. 
+2. Navigate through the webpages. 
 
 ## Conclusion
 

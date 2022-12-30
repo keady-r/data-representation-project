@@ -1,0 +1,120 @@
+<html>
+    <header>
+        <meta name ="viewport" content = "width=device-width, initial-scale=1.0">
+        <title> AboutMe </title>
+        <link rel ="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gastatic.com">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </header>
+    <body>
+        <section class ="headerAboutMe">
+            <nav>
+                <a href ="https://www.gmit.ie/"><img src="images/ATU_Logo.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href = "portfolio.html">BACK</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <div class ="text-box">
+                <h1>Ruth Keady</h1>
+            </div>
+        </section>
+
+        <!-- Hobbies -->
+        <section class="about">
+            <h1> Hobbies </h1>
+            <div class = "row">
+                <div class ="portfolio-col">
+                    <img src="images/CharityRun.JPG"></a>
+                </div>
+                <div class ="portfolio-col">
+                    <img src="images/TagRugby.JPG">
+
+                </div>
+                <div class ="portfolio-col">
+                    <img src="images/WomensMM.JPG">
+                </div>
+                <div class ="portfolio-col">
+                    <img src="images/Hockey.jpeg">
+                </div>
+            </div>
+
+        </section>
+       
+        <section class="about"> 
+
+            <h1> About Me </h1> 
+            
+            <p> 
+                Living an active sport-filled life is important to me. I've always thrived in a team environment playing basketball for Connacht and Galway in secondary school. Today my hobbies are running, tag rugby, and hockey. So much of who I am as a professional comes from what I learnt through sports and being part of a team. I see this most when motivating a team during a particularly stressful project as the deadline approaches, highlighting what is going well but more importantly where we as a team can improve to achieve our collective goal. <br> 
+            
+            </p> 
+            
+            <h1>How I Work</h1> 
+            
+            <p> 
+            
+                I work best in a team environment but only when the work that I am doing directly impacts the team in a positive way. The work that I do has to matter to the team, administrative tasks do not excite me. I like to lead the team, lead the conversation, I have many ideas on how to improve a process and like to brainstorm with others on how to make sure the process works for everyone. I don't like it when my ideas are not considered or fall on deaf ears.  
+            
+                <br><br> 
+            
+                I am goal driven, competitive, and want to tackle issues as they arise head on. I like bullet points on the issues and don't like when information is dragged out. I constantly strive to improve myself - I realize my areas of weakness and try to improve upon them. This is most visible through all the additional learning courses that I have completed. <br> 
+            
+                1. BSC Microbiology <br> 
+            
+                2. MSc Biotechnology <br> 
+            
+                3. Certification Project Management <br> 
+            
+                4. Certification Agile <br> 
+            
+                5. Certification Agile Scrum Master <br> 
+            
+                6. Certification Agile Product Owner <br> 
+            
+                7. Higher Diploma in Computer Science and Data Analytics <br><br> 
+            
+                I plan to complete a communication course in January 2022 and am researching if it is feasible to complete a cloud-based training to advance my technical knowledge. <br><br> 
+        
+                <h3>Please Check Out My Latest Projects on GitHub and My Experiences by Navigating Back to The Portfolio</h3> 
+            
+            </p> 
+        </section> 
+        <section class ="about">
+            <h1> Social Media </h1>
+
+            <div class = "row">
+                <div class ="portfolio-col">
+                    <a href ="https://www.facebook.com/"><img src="images/Facebook_logo.png"></a>
+                </div>
+                <div class ="portfolio-col">
+                    <a href ="https://www.instagram.com/"><img src="images/Instagram-Logo.png"></a>
+
+                </div>
+                <div class ="portfolio-col">
+                    <a href ="https://twitter.com/i/flow/login"><img src="images/Twitter_Logo.jpeg"></a>
+                </div>
+                <div class ="portfolio-col">
+                    <a href ="https://www.linkedin.com/in/ruth-keady-2807a6129/"><img src="images/linkedIn_logo.png"></a>
+        
+                </div>
+            </div>
+        </section>
+        <!------JavaScript for side-bar Menu ----->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+        </script>
+    </body>
+</html>
