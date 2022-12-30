@@ -8,60 +8,20 @@ g00321445@atu.ie
 ***
 
 ## Overview
+This repository contains my project submission for the Data Representation module 2022. As there was flexibility for this project I chose to create a webpage that contains an online digital portfolio (an interactive CV) where future techincal students can showcase their skillset to future employers. The idea behind this business idea is that the credentials within this application would be authenticated. This idea arose from a conversation with a friend who mentioned that within their working environment a situation arose where a team member was hired and within a few weeks it became obvious that this individual had falsified their CV or exagerated skillsets. I found out that this is not an uncommon issue, infact in a study 63% of people admitted to lieing on their CV. As this negatively imapcts teams, organisations, and takes opertunities away from people who have accredited skillsets, I thought to myself - how can this process be improved. At the moment this webpage is a concept, there is no code installed to validate the entries but I hope to take this further to do so. At present I believe the submission overs most of what was asked of this project. 
 
 ### Problem statement 
 Description:
 Write a program that demonstrates that you understand creating and consuming
-RESTful APIs. 
-Create a Web application in Flask that has a RESTful API, the application
-should link to one or more database tables.
-You should also create the web pages that can consume the API. I.e. performs
-CRUD operations on the data.
+RESTful APIs.
 
-Assessment strategy:
-
-Level 1
-A rehash of the sample project lab, I will do in
-Topic09-linking to db, but with your own data.
-I.e.:
-1. A basic Flask server that has a
-2. REST API, (to perform CRUD operations)
-3. One database table and
-4. Accompanying web interface, using AJAX
-calls, to perform these CRUD operations
-40%-45%
-
-Level 2
- more than one database table 45%-50%
-Level 3 
- authorization (logging in) 50%-55%
-
-Plus
-The web page looks nice. Plus 0- 10%
-A more complicated API. Plus 0 – 10%
-Server Links to some third party API. Plus 0 - 10%
-If the third party API requires authentication. Plus 0-10%
-Hosted online (e.g. Azure, Pythonanywhere) Plus 10%
-
-Extra marks for very good projects
-To get over 70% your application should be very well laid out, look good and work
-efficiently and well.
-Project should be well laid out and easy for me to run.
-Marks may be deducted for:
-• Poorly formatted code, that I find hard to read (Do not over comment your
-code),
-• If I find it hard to run,
-• I find it hard to understand your GitHub layout. (a README file is handy).
-______________________________________________________________________________
-
-
-This repository contains my project submission for the Data Representation module 2022. The purpose of this project is to demonstrate that I have achieved the learning outcomes of the module, which are:
+### Structure 
+The purpose of this project is to demonstrate that I have achieved the learning outcomes of the module, which are:
 - Create a basic Flask Server
 - Rest API with ability to perform CRUD operations
 - Create a Database with 2 tables
 - Webpage  interface 
 
-***
 ### DataBases:
 1. Login to MySql on your local desktop
 2. In a seperate terminal navigate to te downloaded files and run 'python databaseCreate.py'   
@@ -77,12 +37,10 @@ This repository contains my project submission for the Data Representation modul
 - SERVER.py - the python script used to start the server. 
 
 
-***
-
 ## Requirements To Run This Project 
 In order to run this project on your device please complete the following steps:
 - Step 1. Within this repository select the green code button. From the dropdown select download ZIP at the bottom. Unzip the folder on your computer. 
-- Step 2. Using your terminal, navigate to the location that the downloaded files were saved.Enter 'python runAPI.py'. Suggest to run the project from a virtual environment. 
+- Step 2. Using your terminal, navigate to the location that the downloaded files were saved.Enter 'python server.py'. Suggest to run the project from a virtual environment. 
 
 ### Requirements
 
@@ -106,14 +64,8 @@ To exit the VM type deactivate.
 2. Navigate through the webpages. 
 
 ## Conclusion
-
-
-## Troubleshooting
-
-
-***
+I enjoyed this project, i think it works well however I fear I spent too much time on the webpages as opose to the API interface. I would like to have third party API interface and authentication however I coudld not find a use case for this within the piece of work. 
 
 ## Credits
-
-
-***
+1. Main source for webpage design - https://www.youtube.com/watch?v=oYRda7UtuhA&t=3458s
+2. Lecture content
